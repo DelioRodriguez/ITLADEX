@@ -1,0 +1,269 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo gris claro */
+    color: #333333; /* Letras gris oscuro */
+}
+
+/* Contenedor Base */
+.base-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff; /* Fondo blanco */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Cabecera */
+.header-container {
+    padding: 15px 0;
+    background: #ffffff; /* Fondo blanco */
+    border-bottom: 1px solid #e0e0e0; /* Borde gris claro */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background: #ffffff; /* Fondo blanco */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #007bff; /* Color azul */
+    text-decoration: none;
+    padding: 14px 24px;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #e6f0ff; /* Fondo azul claro en hover */
+    color: #0056b3; /* Letras azul oscuro en hover */
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff; /* Fondo blanco */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.submenu li a {
+    padding: 12px;
+    color: #007bff; /* Color azul */
+    transition: background 0.3s, color 0.3s;
+    border-radius: 6px;
+}
+
+.submenu li a:hover {
+    background: #e6f0ff; /* Fondo azul claro en hover */
+    color: #0056b3; /* Letras azul oscuro en hover */
+}
+
+.dropD:hover .submenu {
+    display: block;
+}
+
+/* Sección de Cálculo */
+.calculate-index,
+.calculate-global {
+    padding: 20px;
+    background: #ffffff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.calculate-index h2,
+.calculate-global h2 {
+    color: #007bff; /* Color azul */
+    margin-bottom: 15px;
+}
+
+.calculate-index label,
+.calculate-global label {
+    display: block;
+    color: #333333; /* Letras gris oscuro */
+    margin: 10px 0 5px;
+}
+
+.calculate-index select,
+.calculate-global select,
+.calculate-index input,
+.calculate-global input {
+    padding: 14px;
+    border: 1px solid #cccccc; /* Borde gris claro */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.calculate-index button,
+.calculate-global button {
+    background: #007bff; /* Fondo azul */
+    color: #ffffff; /* Letras blancas */
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.calculate-index button:hover,
+.calculate-global button:hover {
+    background: #0056b3; /* Fondo azul oscuro en hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#result,
+#global-result {
+    margin-top: 20px;
+    color: #333333; /* Letras gris oscuro */
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Sección de Materias */
+#subjects-div,
+#global-subjects-div {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#subjects-div h3,
+#global-subjects-div h3 {
+    color: #007bff; /* Color azul */
+    margin-bottom: 15px;
+}
+
+#subjects-div label,
+#global-subjects-div label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333333; /* Letras gris oscuro */
+}
+
+#subjects-div select,
+#global-subjects-div select {
+    padding: 12px;
+    border: 1px solid #cccccc; /* Borde gris claro */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#subjects-div br,
+#global-subjects-div br {
+    margin-bottom: 15px;
+}
+
+/* Sección de Contacto */
+#contact {
+    padding: 30px;
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contact h2 {
+    color: #007bff; /* Color azul */
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #007bff; /* Color azul */
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-media a:hover {
+    color: #0056b3; /* Color azul oscuro en hover */
+    transform: scale(1.1);
+}
+
+/* Sección de Pensum */
+.pensum-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pensum-item {
+    flex: 1 1 calc(25% - 20px); /* 4 items por fila */
+    background: #ffffff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pensum-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pensum-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.pensum-item a {
+    color: #007bff; /* Color azul */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.pensum-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .pensum-item {
+        flex: 1 1 calc(50% - 20px); /* 2 items por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .pensum-item {
+        flex: 1 1 100%; /* 1 item por fila en pantallas muy pequeñas */
+    }
+}

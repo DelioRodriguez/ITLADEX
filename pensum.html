@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensum - ITLADEX</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f4f4;
+            color: #333;
+        }
+        .pensum-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .pensum-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .pensum-item h3 {
+            margin-top: 10px;
+        }
+        .pensum-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .calculator-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="base-container">
+        <div class="body-container">
+            <!-- Sección de Pensum -->
+            <div id="Pensum" class="content-section">
+            
+                <div class="pensum-container">
+                    <!-- Desarrollo de Software -->
+                    <div class="pensum-item">
+                        <a href="/pdf/software.pdf" download>
+                            <img src="/img carrera/software.png" alt="Desarrollo de Software" class="pensum-image">
+                        </a>
+                        <h3>Desarrollo de Software</h3>
+                    </div>
+                    <!-- Seguridad Informática -->
+                    <div class="pensum-item">
+                        <a href="/pdf/Ciber.pdf" download>
+                            <img src="/img carrera/Ciber.png" alt="Seguridad Informática" class="pensum-image">
+                        </a>
+                        <h3>Seguridad Informática</h3>
+                    </div>
+                    <!-- Analítica y Ciencia de Datos -->
+                    <div class="pensum-item">
+                        <a href="/pdf/analitica.pdf" download>
+                            <img src="/img carrera/Anlitica.png" alt="Analítica y Ciencia de Datos" class="pensum-image">
+                        </a>
+                        <h3>Analítica y Ciencia de Datos</h3>
+                    </div>
+                    <!-- Multimedia -->
+                    <div class="pensum-item">
+                        <a href="/pdf/multimedia.pdf" download>
+                            <img src="/img carrera/multimedia.png" alt="Multimedia" class="pensum-image">
+                        </a>
+                        <h3>Multimedia</h3>
+                    </div>
+                    <!-- Sonido -->
+                    <div class="pensum-item">
+                        <a href="/pdf/sonido.pdf" download>
+                            <img src="/img carrera/sonido.png" alt="Sonido" class="pensum-image">
+                        </a>
+                        <h3>Sonido</h3>
+                    </div>
+                    <!-- Diseño Industrial -->
+                    <div class="pensum-item">
+                        <a href="/pdf/Industrial.pdf" download>
+                            <img src="/img carrera/Industrial.png" alt="Diseño Industrial" class="pensum-image">
+                        </a>
+                        <h3>Diseño Industrial</h3>
+                    </div>
+                    <!-- Mecatrónica -->
+                    <div class="pensum-item">
+                        <a href="/pdf/mecatronica.pdf" download>
+                            <img src="/img carrera/mecatronica.png" alt="Mecatrónica" class="pensum-image">
+                        </a>
+                        <h3>Mecatrónica</h3>
+                    </div>
+                    <!-- Manufactura de Dispositivos Médicos -->
+                    <div class="pensum-item">
+                        <a href="/pdf/medicos.pdf" download>
+                            <img src="/img carrera/medicos.png" alt="Manufactura de Dispositivos Médicos" class="pensum-image">
+                        </a>
+                        <h3>Manufactura de Dispositivos Médicos</h3>
+                    </div>
+                    <!-- Manufactura Automatizada -->
+                    <div class="pensum-item">
+                        <a href="/pdf/Manufactura.pdf" download>
+                            <img src="/img carrera/Manufactura.png" alt="Manufactura Automatizada" class="pensum-image">
+                        </a>
+                        <h3>Manufactura Automatizada</h3>
+                    </div>
+                    <!-- Redes de la Información -->
+                    <div class="pensum-item">
+                        <a href="/pdf/Redes.pdf" download>
+                            <img src="/img carrera/Redes.png" alt="Redes de la Información" class="pensum-image">
+                        </a>
+                        <h3>Redes de la Información</h3>
+                    </div>
+                    <!-- Energía Renovable -->
+                    <div class="pensum-item">
+                        <a href="/pdf/Renovable.pdf" download>
+                            <img src="/img carrera/Renovable.png" alt="Energía Renovable" class="pensum-image">
+                        </a>
+                        <h3>Energía Renovable</h3>
+                    </div>
+                    <!-- Informática Forense -->
+                    <div class="pensum-item">
+                        <a href="/pdf/Forense.pdf" download>
+                            <img src="/img carrera/Forense.png" alt="Informática Forense" class="pensum-image">
+                        </a>
+                        <h3>Informática Forense</h3>
+                    </div>
+                    <!-- Simulaciones Interactivas y Videojuegos -->
+                    <div class="pensum-item">
+                        <a href="/pdf/VideoJuegos.pdf" download>
+                            <img src="/img carrera/VideoJuegos.png" alt="Simulaciones Interactivas y Videojuegos" class="pensum-image">
+                        </a>
+                        <h3>Simulaciones Interactivas y Videojuegos</h3>
+                    </div>
+                    <!-- Telecomunicaciones -->
+                    <div class="pensum-item">
+                        <a href="/pdf/Telecomunicaciones.pdf" download>
+                            <img src="/img carrera/Telecomunicaciones.png" alt="Telecomunicaciones" class="pensum-image">
+                        </a>
+                        <h3>Telecomunicaciones</h3>
+                    </div>
+                    <!-- Inteligencia Artificial -->
+                    <div class="pensum-item">
+                        <a href="/pdf/IA.pdf" download>
+                            <img src="/img carrera/IA.png" alt="Inteligencia Artificial" class="pensum-image">
+                        </a>
+                        <h3>Inteligencia Artificial</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 ITLADEX. Todos los derechos reservados.</p>
+        <p><a href="contact.html">Contáctanos</a></p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Script.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>

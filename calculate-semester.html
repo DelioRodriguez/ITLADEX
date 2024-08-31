@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Índice por Cuatrimestre - ITLADEX</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #e9ecef;
+            color: #333;
+        }
+        .calculator-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .result {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .subject-selection {
+            margin-bottom: 15px;
+        }
+        .subject-selection select {
+            width: 100%;
+        }
+        .alert {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .calculator-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="base-container">
+        <div class="body-container">
+            <div id="calculate-index" class="content-section calculator-container">
+                <h2>Calcular Índice</h2>
+                <h3>¡Vamos a calcular tu índice!</h3>
+                
+                <form id="semester-form">
+                    <div class="form-group">
+                        <label for="career-options">Selecciona tu carrera:</label>
+                        <select name="career-options" id="career-options" class="form-control" onchange="updateSubjects()">
+                            <option value="" disabled selected>Selecciona tu carrera</option>
+                            <option value="Software">Desarrollo de Software</option>
+                            <option value="Ciber">Seguridad Informática</option>
+                            <option value="Analitica">Analítica y Ciencia de Datos</option>
+                            <option value="multimedia">Multimedia</option>
+                            <option value="Videojuegos">Desarrollo de Simulaciones Interactivas y Videojuegos</option>
+                            <option value="IA">Inteligencia Artificial</option>
+                            <option value="Renovable">Energías Renovables</option>
+                            <option value="redesInformacion">Redes de Información</option>
+                            <option value="Mecatrónica">Mecatrónica</option>
+                            <option value="manofactura">Manufactura</option>
+                            <option value="Médicos">Manufactura de Dispositivos Médicos</option>
+                            <option value="industrial">Diseño Industrial</option>
+                            <option value="sonido">Sonido</option>
+                            <option value="telecomunicaciones">Telecomunicaciones</option>
+                            <option value="forense">Informática Forense</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="number-of-subjects">Número de materias:</label>
+                        <input type="number" id="number-of-subjects" class="form-control" min="1" value="1" placeholder="Número de materias" required/>
+                    </div>
+
+                    <button id="continue-button" class="btn btn-primary" onclick="showSubjectsDiv(event)">Continuar</button>
+
+                    <div id="alert-container" class="alert" style="display: none;">
+                        Debes seleccionar una carrera antes de continuar.
+                    </div>
+
+                    <div id="subjects-div" style="display: none;">
+                        <h3>Selecciona tus materias y calificaciones</h3>
+                        <div id="subjects-form"></div>
+                        <button class="btn btn-primary Buttons" type="button" onclick="calculateIndex()">Calcular Índice</button>
+                        <div id="result" class="result"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 ITLADEX. Todos los derechos reservados.</p>
+        <p><a href="contact.html">Contáctanos</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>

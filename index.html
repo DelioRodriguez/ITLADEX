@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - ITLADEX</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #00c6ff, #ffffff);
+            color: #fff;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .content-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .pensum-item, .program-item {
+            margin: 20px;
+            transition: transform 0.3s;
+        }
+        .pensum-item:hover, .program-item:hover {
+            transform: scale(1.05);
+        }
+        .pensum-image, .program-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .pensum-container, .program-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .program-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+        }
+        .program-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .program-item h4 {
+            margin-top: 10px;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .calculator-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="base-container">
+        <div class="body-container">
+            <div id="Home" class="content-section">
+                <h2>Bienvenido a ITLADEX</h2>
+                <p>ITLADEX es una plataforma innovadora diseñada para simplificar el seguimiento académico y la gestión de índice académico. Con nuestras herramientas, puedes calcular fácilmente tus índices por cuatrimestre y global, descargar pensums actualizados y mucho más.</p>
+
+                <!-- Sección de Descripción del Programa -->
+                <div class="content-section">
+                    <h3>¿Qué Ofrecemos?</h3>
+                    <p>En ITLADEX, nuestro objetivo es proporcionarte las herramientas necesarias para que puedas gestionar tu progreso académico de manera efectiva. A continuación, te presentamos algunas de nuestras principales características:</p>
+                    <div class="program-container">
+                        <div class="program-item">
+                            <a href="pensum.html">
+                                <img src="/img logo/ITLAL.png" alt="Descargar Pensum" class="program-image">
+                            </a>
+                            <h4>Descargar Pensum</h4>
+                            <p>Accede a los pensums actualizados de tus carreras y consulta los requisitos de cada materia.</p>
+                        </div>
+                        <div class="program-item">
+                            <a href="calculate-semester.html">
+                                <img src="/img logo/Pensando.png" alt="Índice Cuatrimestral" class="program-image">
+                            </a>
+                            <h4>Índice Cuatrimestral</h4>
+                            <p>Calcula el índice de tus materias por cuatrimestre de manera sencilla y rápida.</p>
+                        </div>
+                        <div class="program-item">
+                            <a href="calculate-global.html">   
+                            <img src="/img logo/IndiceG.png" alt="Índice Global" class="program-image">
+                            </a>
+                            <h4>Índice Global</h4>
+                            <p>Obtén un resumen completo de tu rendimiento académico global con nuestro sistema de cálculo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 ITLADEX. Todos los derechos reservados.</p>
+        <p><a href="contact.html">Contáctanos</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>

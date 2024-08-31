@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Índice Global - ITLADEX</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+            color: #333;
+        }
+        .calculator-container {
+            padding: 20px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .result {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .calculator-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="base-container">
+        <div class="body-container">
+            <div id="CalculateGlobal" class="calculator-container">
+                <h2>Calcular Índice Global</h2>
+                <form id="global-form">
+                    <div class="form-group">
+                        <label for="career-options">Selecciona tu carrera:</label>
+                        <select name="career-options" id="career-options" class="form-control">
+                            <option value="" disabled selected>Selecciona tu carrera</option>
+                            <option value="Software">Desarrollo de Software</option>
+                            <option value="Ciber">Seguridad Informática</option>
+                            <option value="Analitica">Analítica y Ciencia de Datos</option>
+                            <option value="multimedia">Multimedia</option>
+                            <option value="Videojuegos">Desarrollo de Simulaciones Interactivas y Videojuegos</option>
+                            <option value="IA">Inteligencia Artificial</option>
+                            <option value="Renovable">Energías Renovables</option>
+                            <option value="redesInformacion">Redes de Información</option>
+                            <option value="Mecatrónica">Mecatrónica</option>
+                            <option value="manofactura">Manufactura</option>
+                            <option value="Médicos">Manufactura de Dispositivos Médicos</option>
+                            <option value="industrial">Diseño Industrial</option>
+                            <option value="sonido">Sonido</option>
+                            <option value="telecomunicaciones">Telecomunicaciones</option>
+                            <option value="forense">Informática Forense</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numTerms">Número de Cuatrimestres:</label>
+                        <input type="number" class="form-control" id="numTerms" min="1" required>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="generateTerms()">Generar Cuatrimestres</button>
+                    <div id="terms-container">
+                        <!-- Cuatrimestres will be added here dynamically -->
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="calculateGlobalIndex()">Calcular Índice Global</button>
+                </form>
+                <div class="result" id="result-container">
+                    <!-- Result will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 ITLADEX. Todos los derechos reservados.</p>
+        <p><a href="contact.html">Contáctanos</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script2.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>
